@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body,
+.calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body {
+  padding: 0 10px;
+  min-height: 100vh;
+  background: #4a98f7;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0;
+}
+.calculator {
+  width: 500px;
+  padding: 30px 30px 38px;
+  background: #fff;
+  border-radius: 20px;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #0e3e79;
+  border: 1px solid white;
+  outline: none;
+  background-color: #9ec9ff;
+}
+
+.calculator-grid [button-clear]:hover {
+  background-color: rgb(236, 39, 39);
+}
+
+.calculator-grid [button-delete]:hover {
+  background-color: rgb(240, 102, 102);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgb(102, 240, 198);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.results {
+  grid-column: 1/-1;
+  height: 150px;
+  background-color: #0e3e79;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px 15px 10px 15px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.results .previous-operation {
+  color: #fff;
+  opacity: 50%;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.results .current-operation {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.Fotter {
+  margin-top: 15px;
+  color: white;
+}
